@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <link rel="stylesheet" href="/mainproject/styles/style.css">
+    <link rel="stylesheet" href="/mainproject/styles/Humane-Bold.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -12,14 +13,14 @@
 </head>
 <body>
     
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-[#6a3971] shadow-sm sticky top-0 z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-            <div class="flex justify-between items-center h-18">
+            <div class="flex justify-between items-center h-19">
                 
                 <div class="shrink-0 flex flex-col">
                     <a href="#" class="group">
-                        <h1 class="text-2xl font-black tracking-tighter text-gray-900 group-hover:text-orange-600 transition-colors font-['Montserrat']">
-                            SOLE<span class="text-orange-600 group-hover:text-gray-900">VAULT</span>
+                        <h1 class="text-2xl font-black tracking-tighter text-gray-900 group-hover:text-[#fdf0ff] transition-colors font-['Montserrat']">
+                            SOLE<span class="text-[#fdf0ff] group-hover:text-gray-900">VAULT</span>
                         </h1>
                         <p class="text-[10px] uppercase tracking-widest text-gray-500 -mt-1 font-semibold">
                             Style From the Ground Up
@@ -30,16 +31,16 @@
                 <div class="hidden md:block">
                     <ul class="flex space-x-8">
                         <li>
-                            <a href="#" class="text-sm font-bold uppercase tracking-wide text-gray-700 hover:text-orange-600 transition-colors">Home</a>
+                            <a href="#" class="text-sm font-bold uppercase tracking-wide text-white hover:text-black hover:bg-[#fdf0ff] hover:rounded-2xl p-2 transition-colors">Home</a>
                         </li>
                         <li>
-                            <a href="#" class="text-sm font-bold uppercase tracking-wide text-gray-700 hover:text-orange-600 transition-colors">About</a>
+                            <a href="#" class="text-sm font-bold uppercase tracking-wide text-white hover:text-black hover:bg-[#fdf0ff] hover:rounded-2xl p-2 transition-colors">About</a>
                         </li>
                         <li>
-                            <a href="#" class="text-sm font-bold uppercase tracking-wide text-gray-700 hover:text-orange-600 transition-colors">Shop</a>
+                            <a href="#" class="text-sm font-bold uppercase tracking-wide text-white hover:text-black hover:bg-[#fdf0ff] hover:rounded-2xl p-2 transition-colors">Shop</a>
                         </li>
                         <li>
-                            <a href="#" class="text-sm font-bold uppercase tracking-wide text-gray-700 hover:text-orange-600 transition-colors">Contact</a>
+                            <a href="#" class="text-sm font-bold uppercase tracking-wide text-white hover:text-black hover:bg-[#fdf0ff] hover:rounded-2xl p-2 transition-colors">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -56,17 +57,28 @@
         </nav>
     </header>
 
-<section id="fading" class="h-screen w-full relative bg-orange-600 flex justify-center items-center flex-col overflow-hidden">
+<section id="fading" class="h-screen w-full relative bg-[#dd00ff] flex justify-center items-center flex-col overflow-hidden">
 
-    <div class="-translate-y-32 top-56">
-        <h1 class="text-6xl md:text-[220px] z-0">
+    <div class="-translate-y-32 top-56 z-0">
+        <h1 class="text-[150px] md:text-[400px] font-[MangoGrotesque] font-bold">
             Step into style
         </h1> 
     </div>
+    <div class="-translate-y-8">
+        <h2 class="text-6xl text-bold font-[MangoGrotesque]">
+            Premium sneakers for the modern athlete
+        </h2>
+    </div>
+
+    <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
+        <div class="bg-[url('image/Shoe-1.png')] z-10 w-[100%] h-[100%] bg-contain bg-center bg-no-repeat">
+        </div>
+    </div>
+
    
 
     <div class="absolute bottom-10 left-10 max-w-xs z-20 -translate-y-20">
-        <p class="text-sm text-gray-600 font-medium">
+        <p class="text-sm text-white font-medium">
         Designed for ultimate comfort and high-performance athletes. 
         Experience the revolution of the sole.
         </p>
@@ -89,9 +101,9 @@
     </div>
 
     
-    <div id="box" class="bg-orange-600 h-screen w-full absolute top-0 left-0  flex justify-center items-center">
+    <div id="box" class="bg-[#dd00ff] h-screen w-full absolute top-0 left-0  flex justify-center items-center">
         <div>
-            <h1 class="md:text-7xl text-4xl font-bold text-white" id="split">
+            <h1 class="md:text-7xl text-4xl font-bold text-[#fdf0ff]" id="split">
                 SOLEVAULT
             </h1>
         </div>
@@ -101,7 +113,7 @@
 
 <section>
 
-    <div class="bg-red-500 h-screen w-full"></div>
+    <div class="bg-[#fdf0ff] h-screen w-full"></div>
 </section>
 
     
@@ -157,5 +169,6 @@
         gp.to("#box", { opacity: 0, y: 200, duration:2});
 
     </script>
+
 </body>
 </html>
