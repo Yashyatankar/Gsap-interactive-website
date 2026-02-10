@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+
+    <h2>Log In</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="hidden" name='next' value='{request.GET.next}'>
+        <button type="submit">Log In</button>
+    </form>
+
+    <hr> <p>Don't have an account?</p>
+    <a href="{% url 'register' %}">
+        <button type="button">Sign Up / Register</button>
+    </a>
+    
+</body>
+</html>
