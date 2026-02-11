@@ -1,27 +1,44 @@
+
+{% load static %}
+{% load crispy_forms_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width='device-width', initial-scale=1.0">
-    <title>register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - SoleVault</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h2>Create your Shoe Store Account</h2>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-    {% if form.errors %}
-        <div style="color: red;">
-            {{ form.errors }}
-        </div>
-    {% endif %}
-
-    <form method="post">
-        {% csrf_token %}
+    <div class="bg-[#dd00ff] text-white p-8 rounded-2xl shadow-2xl w-full max-w-md mx-4">
         
-        {{ form.as_p }}
+        <h2 class="text-2xl font-bold text-center mb-6 text-orange-200">
+            Create your SoleVault Account
+        </h2>
 
-        <button type="submit">Register</button>
-    </form>
+        <form method="post" class="space-y-4">
+            {% csrf_token %}
+            
+            {# Styling the crispy form to have white text for labels #}
+            <div class="crispy-container">
+                {{ form|crispy }}
+            </div>
 
-    <p>Already have an account? <a href="{% url 'login' %}">Log In</a></p>
+            <button type="submit" class="w-full bg-magenta-500 hover:bg-magenta-600 bg-fuchsia-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                <a href="{% url 'login' %}">Register</a>
+                
+            </button>
+        </form>
+
+        <div class="mt-6 text-center border-t border-purple-400 pt-4">
+            <p class="text-sm">Already have an account?</p>
+            <a href="{% url 'login' %}" class="inline-block mt-2 bg-fuchsia-600 text-white px-6 py-1 rounded-full text-sm font-semibold hover:bg-fuchsia-700 transition">
+                Log In
+            </a>
+        </div>
+    </div>
+
 </body>
 </html>

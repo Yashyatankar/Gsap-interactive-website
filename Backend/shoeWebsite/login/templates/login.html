@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,21 +7,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class='m-4 flex justify-center items-center relative'>
 
-    <h2>Log In</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="hidden" name='next' value='{request.GET.next}'>
-        <button type="submit">Log In</button>
-    </form>
+    <div class='bg-[#dd00ff] rounded-2xl max-w-md mx-4 my-4 w-full' >
 
-    <hr> <p>Don't have an account?</p>
-    <a href="{% url 'register' %}">
-        <button type="button">Sign Up / Register</button>
-    </a>
+        <h2 class='text-3xl text-center m-4'>Log In</h2>
+        <form method="post" class='space-y-4 m-4'>
+            {% csrf_token %}
+
+            <div class="crispy-container">
+                {{ form|crispy }}
+            </div>
+            <input type="hidden" name='next' value='{request.GET.next}'>
+            <button type="submit"class="w-full bg-magenta-500 hover:bg-magenta-600 bg-fuchsia-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">Log In</button>
+        </form>
+
+        <hr> <p class='text-white space-y-4 m-4'>Don't have an account?</p>
+        <a href="{% url 'register' %}">
+            <button type="button" class='text-white space-y-4 m-4' >Sign Up / Register</button>
+        </a>
+
+    </div>
+
     
 </body>
 </html>
